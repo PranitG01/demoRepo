@@ -19,4 +19,11 @@ public class TestDemo {
 				.get().then().log().all().statusCode(201);
 
 	}
+
+	@Test
+	public void getBookingsByIdbff() {
+		RestAssured.given().baseUri("https://restful-booker.herokuapp.com").basePath("/booking/413").when().log().all()
+				.get().then().log().all().statusCode(201);
+
+	}
 }
